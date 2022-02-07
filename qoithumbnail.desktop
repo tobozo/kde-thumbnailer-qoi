@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Service
+Name=Quite OK Image Format
+X-KDE-ServiceTypes=ThumbCreator
+MimeType=image/x-qoi;
+IgnoreMaximumSize=true
+X-KDE-Library=qoithumbnail
