@@ -1,6 +1,6 @@
 # kde-thumbnailer-qoi
 
-kde-thumbnailer-qoi is a KDE thumbnailer plugin for QOI image files (e.g. Dolphin)
+kde-thumbnailer-qoi is a KDE thumbnailer plugin for [QOI](https://github.com/phoboslab/qoi) image files (e.g. Dolphin)
 
 <img src="https://user-images.githubusercontent.com/1893754/152891089-51517b9c-fca1-4d3b-a6ff-32728fbf1e13.png" />
 
