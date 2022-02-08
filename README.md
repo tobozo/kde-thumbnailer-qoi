@@ -7,13 +7,20 @@ kde-thumbnailer-qoi is a KDE thumbnailer plugin for QOI image files (e.g. Dolphi
 
 ## Building
 
+
+ - Debian/Ubuntu dependencies: `build-essential extra-cmake-modules gettext libgsf-1-dev libkf5crash-dev kinit-dev libkf5globalaccel-dev libkf5kio-dev libkf5archive-dev libkf5config-dev libkdecorations2-dev libqt5x11extras5-dev qtdeclarative5-dev libkf5guiaddons-dev libkf5configwidgets-dev libkf5windowsystem-dev libkf5coreaddons-dev`
+ - Arch dependencies: `cmake extra-cmake-modules libgsf`
+
+```sh
+    git clone https://github.com/tobozo/kde-thumbnailer-qoi
+    cd kde-thumbnailer-qoi
     git submodule update --init --recursive
     mkdir build
     cd build
-    cmake ../
+    cmake ../ -DXDG_DATA_DIRS=/usr/local/share -DXDG_CONFIG_DIRS=/usr/local/etc/xdg -DQT_PLUGIN_PATH=/usr/local/lib/x86_64-linux-gnu/plugins -DQML2_IMPORT_PATH=/usr/local/lib/x86_64-linux-gnu/qml
     make
     sudo make install
-
+```
 
 ## Credits
 
