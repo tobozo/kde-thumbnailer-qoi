@@ -9,6 +9,7 @@ kde-thumbnailer-qoi is a KDE thumbnailer plugin for [QOI](https://github.com/pho
 
 
  - Debian/Ubuntu dependencies: `build-essential extra-cmake-modules gettext libgsf-1-dev libkf5crash-dev kinit-dev libkf5globalaccel-dev libkf5kio-dev libkf5archive-dev libkf5config-dev libkdecorations2-dev libqt5x11extras5-dev qtdeclarative5-dev libkf5guiaddons-dev libkf5configwidgets-dev libkf5windowsystem-dev libkf5coreaddons-dev`
+
  - Arch dependencies: `cmake extra-cmake-modules libgsf`
 
 ```sh
