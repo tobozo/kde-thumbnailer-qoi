@@ -58,10 +58,8 @@ bool QOICreator::create( const QString& path, int width, int height, QImage& img
         break;
     }
 
-    //QImage::invertPixels(QImage::InvertMode mode = InvertRgb)
-
-    QImage out_img((unsigned char*)pixels,w,h,fmt); // Format_BGR888 // Format_RGB32 // Format_ARGB32
-    //out_img.invertPixels(/*QImage::InvertMode mode = InvertRgb*/);
-    img = out_img.rgbSwapped();
+    QImage out_img((unsigned char*)pixels,w,h,fmt);
+    img = out_img.rgbSwapped(); // WARNING: this is slow and inverting from qoi.h can be done at no cost
+    img = img.scaled(width, height,Qt::KeepAspectRatio);
     return true;
 }
