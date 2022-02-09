@@ -9,6 +9,8 @@ find_package(GObject REQUIRED)
 find_package(GLIB2 REQUIRED)
 find_package(LIBGSF REQUIRED)
 
+include(FeatureSummary)
+include(WriteBasicConfigVersionFile)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings)
@@ -25,6 +27,7 @@ set(libqoi_SRCS
     "qoi/qoi.h"
 )
 
+set(CMAKE_VERBOSE_MAKEFILE ON)
 set(qoithumbnail_SRCS qoicreator.cpp ${libqoi_SRCS})
 
 add_library(qoithumbnail ${qoithumbnail_SRCS})
