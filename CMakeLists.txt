@@ -9,6 +9,9 @@ find_package(GObject REQUIRED)
 find_package(GLIB2 REQUIRED)
 find_package(LIBGSF REQUIRED)
 
+find_program(XDG-MIME_EXECUTABLE xdg-mime)
+find_program(XDG-DESKTOP-MENU_EXECUTABLE xdg-desktop-menu)
+
 include(FeatureSummary)
 include(WriteBasicConfigVersionFile)
 include(KDEInstallDirs)
@@ -39,3 +42,6 @@ target_link_libraries(qoithumbnail
 
 install(TARGETS qoithumbnail DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES qoithumbnail.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(CODE "execute_process(COMMAND ${XDG-MIME_EXECUTABLE} default qoithumbnail.desktop image/x-qoi)")
+#install(CODE "execute_process(COMMAND ${XDG-MIME_EXECUTABLE} install --novendor mime/q-qoi.xml)")
+#install(CODE "execute_process(COMMAND ${XDG-DESKTOP-MENU_EXECUTABLE} install --novendor qoithumbnail.desktop)")
